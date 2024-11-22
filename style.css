@@ -1,19 +1,43 @@
 body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f8ff;
-    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    font-family: 'arial', sans-serif;
 }
 
 .container {
     text-align: center;
+    color: white;
 }
 
 h1 {
     font-size: 3em;
-    color: #4CAF50;
-    opacity: 0;
-    transition: opacity 2s ease-in-out;
+    animation: fadeIn 2s ease-in-out;
+}
+
+p {
+    font-size: 1.5em;
+    animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(0);
+    }
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
